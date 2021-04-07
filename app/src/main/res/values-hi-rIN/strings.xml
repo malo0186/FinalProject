@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Final Project</string>
+    <string name="enter_city_name">शहर का नाम दर्ज करें</string>
+    <string name="radius">त्रिज्या</string>
+    <string name="search">खोज</string>
+    <string name="name">नाम</string>
+    <string name="starting_date">शुरू करने की तिथि</string>
+    <string name="price_range">मूल्य सीमा</string>
+    <string name="url">यूआरएल</string>
+    <string name="save">सहेजें</string>
+    <string name="delete">मिटाना</string>
+    <string name="main_details">यहां आप शहर और त्रिज्या का कोई भी नाम दर्ज कर सकते हैं जिसे आप ईवेंट खोजना चाहते हैं और वांछित विवरण प्राप्त करने के लिए बटन पर क्लिक करें</string>
+    <string name="main_toolbar_title">आस-पास की घटनाओं को खोजें</string>
+    <string name="favorite">पसंदीदा घटनाएँ</string>
+    <string name="help">बचाओ</string>
+    <string name="details_toolbar_title">घटना की जानकारी</string>
+</resources>
