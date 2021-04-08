@@ -3,17 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cst2335.finalproject"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
-    <uses-sdk
-        android:minSdkVersion="23"
-        android:targetSdkVersion="30" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
@@ -24,12 +21,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.FinalProject"
         tools:ignore="HardcodedDebugMode">
-        <activity android:name="com.cst2335.finalproject.CovidDBSave" />
-        <activity android:name="com.cst2335.finalproject.CovidDBLoad" />
-        <activity android:name="com.cst2335.finalproject.CovidEmptyActivity" />
-        <activity
-            android:name="com.cst2335.finalproject.CovidSearchResult" />
-        <activity android:name="com.cst2335.finalproject.CovidMain" >
+        <activity android:name=".CovidDBSave" />
+        <activity android:name=".CovidDBLoad" />
+        <activity android:name=".CovidEmptyActivity" />
+        <activity android:name=".CovidSearchResult" />
+        <activity android:name=".CovidMain">
+<!--        <activity android:name=".MainActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

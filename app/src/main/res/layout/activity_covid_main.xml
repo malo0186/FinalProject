@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/covidCountry"/>
 
+            <!-- REQUIREMENT #3 Each Activity must have atleast 1 edit text !-->
             <EditText
                 android:layout_below="@id/covidCountryTextView"
                 android:id="@+id/covidCountryEditText"

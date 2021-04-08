@@ -116,6 +116,7 @@ public class CovidDBSave extends AppCompatActivity {
             return position;
         }
 
+        /* REQUIREMENT #1: Selecting an item must have a ListView somewhere to present items. */
         /**
          * The purpose of this method is to create and return a GUI representation for our list object
          *

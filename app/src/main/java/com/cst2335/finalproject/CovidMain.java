@@ -41,6 +41,7 @@ public class CovidMain extends AppCompatActivity implements NavigationView.OnNav
 
     EditText countryEditTxt;
     EditText dateEditText;
+    //REQUIREMENT #2: Must have atleast 1 button
     Button searchButton;
     String toDate = "";
 
@@ -60,12 +61,14 @@ public class CovidMain extends AppCompatActivity implements NavigationView.OnNav
         String savedDate = prefs.getString(FROM_DATE, "");
         toDate = prefs.getString(TO_DATE, "");
 
+        //REQUIREMENT #4: must have atleast 1 edit text with appropriate text input method
         countryEditTxt = findViewById(R.id.covidCountryEditText);
         countryEditTxt.setText(savedCountry);
 
         dateEditText = findViewById(R.id.covidDateEditText);
         dateEditText.setText(savedDate);
 
+        //REQUIREMENT #2: MUST have atleast one button
         searchButton = findViewById(R.id.covidSearchBtn);
 
         Toolbar tBar = findViewById(R.id.toolbar);
@@ -121,6 +124,7 @@ public class CovidMain extends AppCompatActivity implements NavigationView.OnNav
                 Snackbar.make(searchButton, "Date field cannot be empty!", Snackbar.LENGTH_LONG).show();
 
             } else {
+                //REQUIREMENT #10: Each activity must use SharedPreferences
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putString(COUNTRY, country)
                         .putString(FROM_DATE, fromDate)

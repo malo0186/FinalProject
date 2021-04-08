@@ -51,6 +51,8 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
     String result = null;
     String savedCountry;
     String savedDate;
+
+    //REQUIREMENT #2: Atleast 1 progressBar
     ProgressBar progressBar;
     MyListAdapter adt;
     ListView myList;
@@ -133,11 +135,13 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
         adt = new MyListAdapter();
         myList.setAdapter(adt);
 
+        //REQUIREMENT #1: Selecting an item from the listview must show detailed information about the item selected
         myList.setOnItemLongClickListener((parent, view, pos, id) -> {
             CovidMessage msg = data.get(pos);
             Integer itemID = data.get(pos).getID();
             String itemDetails = dataDetails.get(itemID);
 
+            //REQUIREMENT #2: Atleast 1 button.
             AlertDialog.Builder adb = new AlertDialog.Builder(this)
                     .setTitle("Delete this entry?")
                     .setMessage(itemDetails)
@@ -261,6 +265,8 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
             return "Task has been completed";
         }
 
+
+        //REQUIREMENT #2: Atleast one progress bar
         /**
          * This method is called whenever publishProgress is called. This method makes the progress
          * bar visible and updates it with the value passed in
