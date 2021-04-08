@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipe Search"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/recipeToolbar"
+        android:layout_below="@+id/title" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/recipeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+
+        android:visibility="invisible"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:progress="0"
+        tools:ignore="UnknownId" />
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Think of food"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/searchText"
+        android:text="@string/recipeButtonSearch" />
+
+    <ListView
+        android:id="@+id/theList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSearch"
+        />
+
+</RelativeLayout>
