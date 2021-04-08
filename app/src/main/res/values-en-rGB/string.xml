@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FinalProject</string>
 
+    <string name="app_name">Final Project</string>
 
     <string name="covidCountry">Country</string>
-    <string name="covidCountryEditText">Enter a country name...</string>
+    <string name="covidCountryEditText">Enter a country name</string>
     <string name="covidDate">Date</string>
-    <string name="covidDateEditText">Please select a date...</string>
+    <string name="covidDateEditText">Please select a date…</string>
     <string name="covidSearchBtn">Search</string>
     <string name="covidAuthor">Author: Hamzeh</string>
     <string name="covidVersion">Version 1.0</string>
