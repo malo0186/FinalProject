@@ -25,8 +25,8 @@
         <activity android:name=".CovidDBLoad" />
         <activity android:name=".CovidEmptyActivity" />
         <activity android:name=".CovidSearchResult" />
-        <activity android:name=".CovidMain">
-<!--        <activity android:name=".MainActivity">-->
+        <activity android:name=".CovidMain"/>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
