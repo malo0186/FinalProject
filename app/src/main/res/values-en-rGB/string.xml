@@ -1,25 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Final Project</string>
-    <string name="enter_city_name">Enter City Name</string>
-    <string name="radius">Radius</string>
-    <string name="search">Search</string>
-    <string name="name">Name</string>
-    <string name="starting_date">Starting Date</string>
-    <string name="price_range">Price Range</string>
-    <string name="url">URL</string>
-    <string name="save">Save</string>
-    <string name="delete">Delete</string>
-    <string name="main_details"><![CDATA[Here you can enter any name of city & radius that you want to search events and click on search to get desired details]]></string>
-    <string name="main_toolbar_title">Search Nearby Events</string>
-    <string name="favorite">Favorite Events</string>
-    <string name="help">Help</string>
-    <string name="details_toolbar_title">Event Details</string>
 
+    <string name="app_name">Final Project</string>
 
     <string name="covidCountry">Country</string>
-    <string name="covidCountryEditText">Enter a country name...</string>
+    <string name="covidCountryEditText">Enter a country name</string>
     <string name="covidDate">Date</string>
-    <string name="covidDateEditText">Please select a date...</string>
+    <string name="covidDateEditText">Please select a date…</string>
     <string name="covidSearchBtn">Search</string>
     <string name="covidAuthor">Author: Hamzeh</string>
     <string name="covidVersion">Version 1.0</string>
