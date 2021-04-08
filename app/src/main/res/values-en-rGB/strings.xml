@@ -14,4 +14,37 @@
     <string name="favorite">Favorite Events</string>
     <string name="help">Help</string>
     <string name="details_toolbar_title">Event Details</string>
+
+
+
+    ******
+
+
+<!--    <string name="app_name">Final Project</string>-->
+    <string name="covidCountry">Country</string>
+    <string name="covidCountryEditText">Enter a country name</string>
+    <string name="covidDate">Date</string>
+    <string name="covidDateEditText">Please select a date…</string>
+    <string name="covidSearchBtn">Search</string>
+    <string name="covidAuthor">Author: Hamzeh</string>
+    <string name="covidVersion">Version 1.0</string>
+    <string name="covidAppTitle">COVID-19 Case Data</string>
+    <string name="sortSwitch">Sort by # of cases</string>
+    <string name="covidSearchResults">Search Results</string>
+    <string name="covidSort">The list has been sorted</string>
+    <string name="covidUnsort">The list is not sorted</string>
+    <string name="covidSavedResults">Saved Search Results</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="covidHide">Hide</string>
+    <string name="covidMessageHere">Details</string>
+    <string name="covidLocationDetails">Location Details</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="covidHelpMain">Enter a country and a pick a date to see updated statistics on that particular day.</string>
+    <string name="covidHelpTitle">Help</string>
+    <string name="covidHelpResults">This page shows updated statistics of the selected country, on the day selected. \n\nTo sort the results, tick the checkbox.\n\nTo view details about the location, click an item. \n\nTo delete an item from the database, click and hold an item and follow the dialog.</string>
+    <string name="covidGoBackToHome">GO BACK TO HOME</string>
+    <string name="covidSaveSearch">SAVE SEARCH RESULTS</string>
+    <string name="covidLoadResults">LOAD SEARCH RESULTS</string>
+    <string name="covidHelpMenuItem">HELP</string>
 </resources>
