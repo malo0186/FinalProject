@@ -5,11 +5,8 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,27 +17,26 @@
         android:parentActivityName="CovidSearchResult"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.FinalProject">
-        <activity android:name=".TMFavoritesActivity"></activity>
-        <activity android:name=".TMDetailActivity" />
-        <activity android:name=".TMActivity" >
         android:testOnly="true"
         android:theme="@style/Theme.FinalProject"
+        android:usesCleartextTraffic="true"
         tools:ignore="HardcodedDebugMode">
+        <activity android:name=".recipeSearch.RecipePage"></activity>
+        <activity android:name=".TMFavoritesActivity" />
+        <activity android:name=".TMDetailActivity" />
+        <activity android:name=".TMActivity" />
         <activity android:name=".CovidDBSave" />
         <activity android:name=".CovidDBLoad" />
         <activity android:name=".CovidEmptyActivity" />
         <activity android:name=".CovidSearchResult" />
-        <activity android:name=".CovidMain">
+        <activity android:name=".CovidMain" />
+        <activity android:name=".recipeSearch.RecipeSearch" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
         </activity>
     </application>
 

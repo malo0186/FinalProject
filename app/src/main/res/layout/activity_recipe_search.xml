@@ -1,59 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recipe Search"
-        android:textSize="20dp" />
+    android:layout_height="match_parent"
+    android:paddingBottom="50dp"
+    tools:context="com.cst2335.finalproject.recipeSearch.RecipeSearch">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/recipe_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/recipeToolbar"
-        android:layout_below="@+id/title" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="#303F9F"
+        android:elevation="4dp"
+        />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+        android:layout_below="@+id/progressBar" />
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_below="@+id/recipeToolbar"
+        android:layout_below="@+id/recipe_toolbar"
         android:layout_width="match_parent"
         android:layout_height="25dp"
-
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         android:visibility="invisible"
         style="?android:attr/progressBarStyleHorizontal"
         android:max="100"
         android:progress="0"
         tools:ignore="UnknownId" />
 
-    <EditText
-        android:id="@+id/searchText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/progressBar"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="Think of food"
-        android:inputType="textPersonName" />
-
-    <Button
-        android:id="@+id/buttonSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/progressBar"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/searchText"
-        android:text="@string/recipeButtonSearch" />
-
     <ListView
-        android:id="@+id/theList"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonSearch"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:id="@+id/searchResults"
+        android:divider="#40009688"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/searchView"/>
 
 </RelativeLayout>

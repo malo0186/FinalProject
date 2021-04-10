@@ -29,9 +29,10 @@
             android:src="@drawable/covid19img"/>
 
         <ImageButton
+            android:id="@+id/recipe_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/covid19img"
+            android:src="@drawable/recipe_icon"
             />
 
         <ImageButton

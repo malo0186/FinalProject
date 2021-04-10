@@ -43,4 +43,9 @@
     <string name="covidLoadResults">LOAD SEARCH RESULTS</string>
     <string name="covidHelpMenuItem">HELP</string>
 
+    <string name="ingredients"><u>Ingredients</u></string>
+    <string name="recipeButtonText">Go to Recipe</string>
+    <string name="savedRecipes">Saved Recipes</string>
+    <string name="longPressHint"><i>Long Press to Delete</i></string>
+
 </resources>

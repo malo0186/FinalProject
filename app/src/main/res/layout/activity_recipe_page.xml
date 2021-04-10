@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cst2335.finalproject.recipeSearch.RecipeSearch">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/recipe_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#303F9F"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/recipe_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recipe_toolbar"
+        android:fontFamily="serif-monospace"
+        android:gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="40dp"
+        android:paddingRight="20dp"
+        android:textColor="#668c91"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/recipe_btn"
+        android:paddingTop="40dp"
+        android:layout_below="@id/recipe_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/white"
+        android:src="@drawable/recipe_button"/>
+
+    <TextView
+        android:id="@+id/ingredients_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recipe_btn"
+        android:paddingLeft="25dp"
+        android:paddingTop="40dp"
+        android:paddingRight="20dp"
+        android:textColor="#3D5457"
+        android:textSize="22dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ingredients_title"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/ingredients_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </ScrollView>
+
+
+</RelativeLayout>
