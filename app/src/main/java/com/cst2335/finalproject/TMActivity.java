@@ -2,6 +2,7 @@ package com.cst2335.finalproject;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -41,6 +42,8 @@ public class TMActivity extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_t_m);
 
+        Toolbar tBar = findViewById(R.id.toolbar);
+        setSupportActionBar(tBar);
         getSupportActionBar().setTitle(R.string.main_toolbar_title);
 
         input_City = findViewById(R.id.input_City);

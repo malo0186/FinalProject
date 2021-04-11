@@ -6,17 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".TMActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <EditText
         android:id="@+id/input_City"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/enter_city_name"
-        android:layout_marginTop="5dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:inputType="textPersonName"
-        />
+        android:ems="10"
+        android:hint="@string/enter_city_name"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/input_radius"

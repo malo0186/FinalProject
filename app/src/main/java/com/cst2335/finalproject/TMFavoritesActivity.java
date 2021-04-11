@@ -1,6 +1,7 @@
 package com.cst2335.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.widget.ListView;
@@ -24,6 +25,8 @@ public class TMFavoritesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_t_m_favorites);
 
+        Toolbar tBar = findViewById(R.id.toolbar);
+        setSupportActionBar(tBar);
         getSupportActionBar().setTitle(R.string.favorite);
 
         listEvents = findViewById(R.id.listEvents);

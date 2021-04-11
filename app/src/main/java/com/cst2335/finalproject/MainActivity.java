@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        ImageButton (yourDrawableimage) = (ImageButton)findViewById(R.id.btn_covid19);
-//        btn_covid19.setOnClickListener(bt -> {
-//            Intent nextPage = new Intent(MainActivity.this, YourClass.class);
-//            startActivity(nextPage);
-//        });
+        ImageButton btn_tm = (ImageButton)findViewById(R.id.btn_tm);
+        btn_tm.setOnClickListener(bt -> {
+            Intent nextPage = new Intent(MainActivity.this, TMActivity.class);
+            startActivity(nextPage);
+        });
 
 
         //        ImageButton (yourDrawableimage) = (ImageButton)findViewById(R.id.btn_covid19);

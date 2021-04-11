@@ -6,10 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".TMDetailActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <ImageView
         android:id="@+id/iv_event_banner"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_below="@+id/toolbar"
         android:scaleType="fitXY"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 

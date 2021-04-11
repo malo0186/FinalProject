@@ -1,6 +1,7 @@
 package com.cst2335.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -32,6 +33,8 @@ public class TMDetailActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_t_m_detail);
 
+        Toolbar tBar = findViewById(R.id.toolbar);
+        setSupportActionBar(tBar);
         getSupportActionBar().setTitle(R.string.details_toolbar_title);
 
         iv_event_banner = findViewById(R.id.iv_event_banner);
