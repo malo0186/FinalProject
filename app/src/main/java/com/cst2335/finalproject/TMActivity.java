@@ -17,8 +17,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -123,25 +126,27 @@ public class TMActivity extends AppCompatActivity implements View.OnClickListene
 
         switch (view.getId()){
             case R.id.btn_search:
-                    if(!input_City.getText().toString().isEmpty() && !input_radius.getText().toString().isEmpty()) {
-                        editor.putString("last_city",input_City.getText().toString());
-                        editor.putString("last_radius",input_radius.getText().toString());
-                        editor.commit();
+                if(!input_City.getText().toString().isEmpty() && !input_radius.getText().toString().isEmpty()) {
+                    editor.putString("last_city",input_City.getText().toString());
+                    editor.putString("last_radius",input_radius.getText().toString());
+                    editor.commit();
 
-                        StringBuilder sb = new StringBuilder();
-                        sb.append("https://app.ticketmaster.com/discovery/v2/events.json?apikey=");
-                        sb.append(API_KEY);
-                        sb.append("&city=");
-                        sb.append(input_City.getText().toString());
-                        sb.append("&radius=");
-                        sb.append(input_radius.getText().toString());
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("https://app.ticketmaster.com/discovery/v2/events.json?apikey=");
+                    sb.append(API_KEY);
+                    sb.append("&city=");
+                    sb.append(input_City.getText().toString());
+                    sb.append("&radius=");
+                    sb.append(input_radius.getText().toString());
 
-                        GetEvents getEvents= new GetEvents();
-                        getEvents.execute(sb.toString());
+                    GetEvents getEvents= new GetEvents();
+                    getEvents.execute(sb.toString());
 
-                    } else {
-                        Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
-                    }
+                } else {
+                    RelativeLayout relativeLayout = findViewById(R.id.mainlayout);
+                    Snackbar.make(relativeLayout, "Please enter all fields", Snackbar.LENGTH_LONG)
+                            .show();
+                }
                 break;
 
             case R.id.btn_favorite:
@@ -183,7 +188,9 @@ public class TMActivity extends AppCompatActivity implements View.OnClickListene
         @Override
         protected void onPostExecute(ArrayList<Ticket> list) {
             if(list.size() ==0) {
-                Toast.makeText(TMActivity.this, "No Events Found.", Toast.LENGTH_SHORT).show();
+                RelativeLayout relativeLayout = findViewById(R.id.mainlayout);
+                Snackbar.make(relativeLayout, "No Events Found.", Snackbar.LENGTH_LONG)
+                        .show();
             } else {
                 adapter = new TMEventAdapter(getApplicationContext(), list);
                 list_events.setAdapter(adapter);

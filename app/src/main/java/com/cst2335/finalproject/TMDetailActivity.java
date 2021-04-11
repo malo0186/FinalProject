@@ -11,8 +11,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.InputStream;
 
@@ -90,7 +93,10 @@ public class TMDetailActivity extends AppCompatActivity implements View.OnClickL
                         b.getString("banner"));
 
                 if(tmDatabase.deleteFavoriteEvent(ticketDel.getId())){
-                    Toast.makeText(TMDetailActivity.this, "Deleted from favorites", Toast.LENGTH_SHORT).show();
+                    RelativeLayout relativeLayout = findViewById(R.id.detailLayout);
+                    Snackbar.make(relativeLayout, "Deleted from favorites", Snackbar.LENGTH_LONG)
+                            .show();
+                    Toast.makeText(TMDetailActivity.this, "", Toast.LENGTH_SHORT).show();
                     finish();
                 }
 
@@ -104,12 +110,14 @@ public class TMDetailActivity extends AppCompatActivity implements View.OnClickL
                         b.getString("url"),
                         b.getString("banner"));
                 long id = tmDatabase.saveFavoriteEvent(ticket);
+                RelativeLayout relativeLayout = findViewById(R.id.detailLayout);
                 if(id == -1)
                 {
-                    Toast.makeText(TMDetailActivity.this, "Event exists in favorites!", Toast.LENGTH_SHORT).show();
-
+                    Snackbar.make(relativeLayout, "Event exists in favorites!", Snackbar.LENGTH_LONG)
+                            .show();
                 }else {
-                    Toast.makeText(TMDetailActivity.this, "Event: " + ticket.getName() + " has been added in favorites!", Toast.LENGTH_SHORT).show();
+                    Snackbar.make(relativeLayout, "Event: " + ticket.getName() + " has been added in favorites!", Snackbar.LENGTH_LONG)
+                            .show();
                 }
 
                 btn_save.setEnabled(false);
