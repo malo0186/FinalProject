@@ -20,4 +20,11 @@
         android:title="@string/save"
         android:icon="@drawable/save_white"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_recipe_search_homepage"
+        android:orderInCategory="300"
+        android:title="@string/recipe_toolbar_icon1"
+        android:icon="@drawable/recipe_search_home_nav"
+        app:showAsAction="ifRoom" />
 </menu>

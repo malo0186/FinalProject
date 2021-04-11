@@ -40,7 +40,6 @@ public class TMActivity extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_t_m);
-
         getSupportActionBar().setTitle(R.string.main_toolbar_title);
 
         input_City = findViewById(R.id.input_City);
