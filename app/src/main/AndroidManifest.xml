@@ -17,11 +17,11 @@
         android:parentActivityName="CovidSearchResult"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        <activity android:name=".recipeSearch.RecipePage"></activity>
         android:usesCleartextTraffic="true"
         android:testOnly="true"
         tools:ignore="HardcodedDebugMode"
         android:theme="@style/Theme.FinalProject">
+        <activity android:name=".recipeSearch.RecipePage"></activity>
         <activity android:name=".TMFavoritesActivity"/>
         <activity android:name=".TMDetailActivity" />
         <activity android:name=".TMActivity" />
