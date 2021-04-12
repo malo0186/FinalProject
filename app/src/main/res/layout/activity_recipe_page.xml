@@ -22,7 +22,7 @@
         android:paddingLeft="20dp"
         android:paddingTop="40dp"
         android:paddingRight="20dp"
-        android:textColor="#668c91"
+        android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
         android:paddingLeft="25dp"
         android:paddingTop="40dp"
         android:paddingRight="20dp"
-        android:textColor="#3D5457"
+        android:textColor="@color/black"
         android:textSize="22dp" />
 
     <ScrollView
