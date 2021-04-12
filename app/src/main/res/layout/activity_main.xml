@@ -34,7 +34,6 @@
         android:layout_below="@+id/btn_covid19"
         android:text="Covid Search"/>
 
-
         <ImageButton
             android:id="@+id/btn_tm"
             android:layout_below="@id/covid_title_text"
@@ -43,7 +42,8 @@
             android:gravity="center_horizontal"
             android:background="@android:color/transparent"
             android:layout_height="wrap_content"
-            android:src="@drawable/covid19img"/>
+            android:src="@drawable/ticketmaster"
+            android:layout_margin="8dp"/>
 
     <TextView
         android:id="@+id/tm_title_text"
