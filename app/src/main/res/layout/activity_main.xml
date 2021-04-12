@@ -1,45 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:background="#abc"
-    tools:context=".MainActivity">
+    tools:context="com.cst2335.finalproject.MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#303F9F"
+        android:elevation="4dp"
+        />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
 
         <ImageButton
             android:id="@+id/btn_covid19"
-            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/main_toolbar"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:src="@drawable/covid19img" />
 
+    <TextView
+        android:id="@+id/covid_title_text"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_covid19"
+        android:text="Covid Search"/>
 
         <ImageButton
             android:id="@+id/btn_tm"
-            android:layout_width="wrap_content"
+            android:layout_below="@id/covid_title_text"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:background="@android:color/transparent"
             android:layout_height="wrap_content"
             android:src="@drawable/ticketmaster"
             android:layout_margin="8dp"/>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/covid19img"
-            />
+    <TextView
+        android:id="@+id/tm_title_text"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_tm"
+        android:text="Ticket Master Search"/>
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:id="@+id/recipe_icon"
+            android:layout_below="@id/tm_title_text"
+            android:paddingTop="25dp"
+            android:gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recipe_icon"
+            />
+
+    <TextView
+        android:id="@+id/recipe_title_text"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recipe_icon"
+        android:text="Recipe Search"/>
+
+        <ImageButton
+            android:id="@+id/another_recipe_icon"
+            android:layout_below="@+id/recipe_title_text"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:src="@drawable/covid19img"/>
 
+    <TextView
+        android:id="@+id/another_recipe_title_text"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/another_recipe_icon"
+        android:text="Recipe Search 2"/>
 
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

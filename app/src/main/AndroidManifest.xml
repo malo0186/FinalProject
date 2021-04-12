@@ -5,7 +5,6 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -18,6 +17,7 @@
         android:parentActivityName="CovidSearchResult"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        <activity android:name=".recipeSearch.RecipePage"></activity>
         android:usesCleartextTraffic="true"
         android:testOnly="true"
         tools:ignore="HardcodedDebugMode"
@@ -29,6 +29,7 @@
         <activity android:name=".CovidDBLoad" />
         <activity android:name=".CovidEmptyActivity" />
         <activity android:name=".CovidSearchResult" />
+        <activity android:name=".recipeSearch.RecipeSearch" />
         <activity android:name=".CovidMain"/>
         <activity android:name=".MainActivity">
             <intent-filter>

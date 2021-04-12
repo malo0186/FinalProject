@@ -43,6 +43,30 @@
     <string name="covidLoadResults">LOAD SEARCH RESULTS</string>
     <string name="covidHelpMenuItem">HELP</string>
 
+    <string name="ingredients"><u>Ingredients</u></string>
+    <string name="recipeButtonText">Go to Recipe</string>
+    <string name="savedRecipes">Saved Recipes</string>
+    <string name="longPressHint"><i>Long Press to Delete</i></string>
 
+    <string name="covid_toolbar_icon">Covid Search</string>
+    <string name="tm_toolbar_icon">Ticket Master</string>
+    <string name="recipe_toolbar_icon1">Recipe Search</string>
+    <string name="recipe_toolbar_icon2">Recipe Search 2</string>
+    <string name="to_home_page">Home</string>
+    <string name="recipe_search_toolbar_title">Recipe Search</string>
+    <string name="recipe_search_toolbar_subtitle">Cal Malouin - V1</string>
+    <string name="toast_dialog_no_results">No Results</string>
+    <string name="alert_dialog_recipe_search_help_text">Enter the name of a dish in the search box to find associated recipes.\n\nClick on a recipe to get more information.</string>
+    <string name="alert_dialog_okay_button">Okay</string>
+    <string name="recipe_page_toolbar_title">Recipe Information</string>
+    <string name="snackbar_dialog_undo_button">Undo</string>
+    <string name="snackbar_dialog_save_text">Recipe Saved</string>
+    <string name="alert_dialog_recipe_page_help_text">Click on the \'Go to Recipe\' button for more information on this recipe.\n\nClick the floppy disk icon in the top right to save this recipe for later.</string>
+    <string name="toast_dialog_no_saves">No Saved Recipes</string>
+    <string name="toast_dialog_delete_save_text">Would you like to delete this saved recipe?</string>
+    <string name="toast_dialog_delete_save_text_yes">Yes</string>
+    <string name="toast_dialog_delete_save_text_no">No</string>
+    <string name="toast_dialog_delete_save_text_title">Delete Recipe</string>
+    <string name="choose_which_app_to_launch">Choose which app you would like to launch.</string>
 
 </resources>
