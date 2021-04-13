@@ -107,14 +107,14 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
                 }
 
                 adt.notifyDataSetChanged();
-                Snackbar.make(sw, getResources().getString(R.string.covidSort), BaseTransientBottomBar.LENGTH_LONG)
+                Snackbar.make(sw, getResources().getString(R.string.covidUnsort), BaseTransientBottomBar.LENGTH_LONG)
                         .setAction("REDO", click -> cb.setChecked(!checked))
                         .show();
             } else {
                 Collections.sort(data);
                 adt.notifyDataSetChanged();
 
-                Snackbar.make(sw, getResources().getString(R.string.covidUnsort), BaseTransientBottomBar.LENGTH_LONG)
+                Snackbar.make(sw, getResources().getString(R.string.covidSort), BaseTransientBottomBar.LENGTH_LONG)
                         .setAction("UNDO", click -> cb.setChecked(!checked))
                         .show();
             }
@@ -138,7 +138,7 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
         //REQUIREMENT #1: Selecting an item from the listview must show detailed information about the item selected
         myList.setOnItemLongClickListener((parent, view, pos, id) -> {
             CovidMessage msg = data.get(pos);
-            Integer itemID = data.get(pos).getID();
+            Integer itemID = data.get(pos).getId();
             String itemDetails = dataDetails.get(itemID);
 
             //REQUIREMENT #2: Atleast 1 button.
@@ -149,7 +149,7 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
                     .setPositiveButton("YES", (click, arg) -> {
                         SQLiteDatabase db = openOrCreateDatabase("CovidDB", MODE_PRIVATE, null);
                         data.remove(pos);
-                        db.delete("covid_t", "ID= ?", new String[] {Long.toString(msg.getID())});
+                        db.delete("covid_t", "ID= ?", new String[] {Long.toString(msg.getId())});
                         adt.notifyDataSetChanged();
                         if(isTablet)
                             df.deleteFragment();
@@ -160,7 +160,7 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
         });
 
         myList.setOnItemClickListener((theList, item, pos, id) -> {
-            Integer itemID = data.get(pos).getID();
+            Integer itemID = data.get(pos).getId();
             String itemDetails = dataDetails.get(itemID);
 
             Bundle dataToPass = new Bundle();
@@ -243,7 +243,7 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
                             unsortedData.add(msg);
 
                             String details = "Latitude: " + latitude + "\nLongitude: " + longitude;
-                            dataDetails.put(msg.getID(), details);
+                            dataDetails.put(msg.getId(), details);
                         }
 
                         progress = progress + progressStep;
@@ -340,7 +340,7 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
          */
         @Override
         public long getItemId(int position) {
-            return getItem(position).getID();
+            return getItem(position).getId();
         }
 
 
@@ -445,8 +445,6 @@ public class CovidSearchResult extends AppCompatActivity implements NavigationVi
     /**
      * The purpose of this method is to go to CovidDBload whenever the load icon is selected from
      * either the toolbaror the drawer
-     *
-     * @author Hamzeh
      */
     public void load() {
         Intent goToSaveData = new Intent(this, CovidDBLoad.class);

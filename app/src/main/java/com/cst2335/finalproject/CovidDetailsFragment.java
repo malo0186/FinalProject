@@ -28,14 +28,17 @@ public class CovidDetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         dataFromActivity = getArguments();
-        details =dataFromActivity.getString(CovidSearchResult.ITEM_DETAILS);
+        details = dataFromActivity.getString(CovidSearchResult.ITEM_DETAILS);
 
+        // Inflate the layout for this fragment
         View result = inflater.inflate(R.layout.fragment_covid_details, container, false);
 
+        //show the message
         TextView msg = result.findViewById(R.id.covidMessageHere);
         msg.setText(details);
 
         Button hideBtn = result.findViewById(R.id.covidHide);
+
 
         hideBtn.setOnClickListener(c -> {
             deleteFragment();

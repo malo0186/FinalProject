@@ -28,7 +28,7 @@ public class CovidEmptyActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getResources().getString(R.string.covidLocationDetails));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Bundle dataToPass = getIntent().getExtras();
+        Bundle dataToPass = getIntent().getExtras(); //get the data that was passed from
 
         CovidDetailsFragment df = new CovidDetailsFragment();
         df.setArguments(dataToPass);
