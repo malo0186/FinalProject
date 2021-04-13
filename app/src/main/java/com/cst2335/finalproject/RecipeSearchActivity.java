@@ -25,7 +25,7 @@ public class RecipeSearchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipe_search);
+        setContentView(R.layout.activity_recipe_search_maciborka);
 
         searchRecipeEditText = findViewById(R.id.searchRecipeEditText);
         searchForRecipeBtn = findViewById(R.id.searchRecipeButton);

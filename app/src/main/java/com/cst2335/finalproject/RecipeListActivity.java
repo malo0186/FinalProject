@@ -150,7 +150,7 @@ public class RecipeListActivity extends AppCompatActivity {
                 out.close();
                 return out.toByteArray();
             } catch (MalformedURLException mfe) {
-                Log.i(TAG, "Malformed URL exception");
+                Log.i(TAG, "Malformed URL exception.");
             } catch (IOException ioe) {
                 Log.i(TAG, "IO Exception." + ioe.getMessage());
             } finally {
