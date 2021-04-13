@@ -1,8 +1,5 @@
 package com.cst2335.finalproject;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -12,6 +9,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * @author Cal Maciborka
+ */
 public class RecipeDetailsActivity extends AppCompatActivity {
     private TextView recipeDetailsTitle, recipeDetailsIngredients, recipeDetailsURL;
     private Button saveRecipeBtn, backToSearchBtn;

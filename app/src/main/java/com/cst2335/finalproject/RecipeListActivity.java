@@ -1,8 +1,5 @@
 package com.cst2335.finalproject;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -26,6 +23,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * @author Cal Maciborka
+ */
 public class RecipeListActivity extends AppCompatActivity {
     private final static String TAG = "RecipeList";
     List<RecipeItem> recipeItemList = new ArrayList<>();

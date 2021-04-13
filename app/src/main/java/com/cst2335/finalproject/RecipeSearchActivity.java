@@ -1,8 +1,5 @@
 package com.cst2335.finalproject;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,15 +9,19 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-//Cal Maciborka
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * @author Cal Maciborka
+ */
 public class RecipeSearchActivity extends AppCompatActivity {
     private static final String SHARED_PREF = "SharedPref";
     private static final String TEXT = "text";
 
     private EditText searchRecipeEditText;
     private Button searchForRecipeBtn, savedRecipesBtn;
-    private ImageButton helpBtn;
+    private ImageButton helpBtn, homeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class RecipeSearchActivity extends AppCompatActivity {
         searchForRecipeBtn = findViewById(R.id.searchRecipeButton);
         savedRecipesBtn = findViewById(R.id.savedRecipesButton);
         helpBtn = findViewById(R.id.mainHelpButton);
+        homeBtn = findViewById(R.id.mainHomeButton);
 
         searchForRecipeBtn.setOnClickListener(view -> {
             String text = searchRecipeEditText.getText().toString();
@@ -51,6 +53,11 @@ public class RecipeSearchActivity extends AppCompatActivity {
                 .setMessage(getText(R.string.mainActivityHelpMessage))
                 .setNeutralButton(getText(R.string.alertOK), null)
                 .show());
+        homeBtn.setOnClickListener(view -> {
+            Intent goHome = new Intent(RecipeSearchActivity.this, MainActivity.class);
+            startActivity(goHome);
+        });
+
         loadSearchText();
 
     }
