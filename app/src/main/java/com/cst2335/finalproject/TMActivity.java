@@ -188,9 +188,7 @@ public class TMActivity extends AppCompatActivity implements View.OnClickListene
         @Override
         protected void onPostExecute(ArrayList<Ticket> list) {
             if(list.size() ==0) {
-                RelativeLayout relativeLayout = findViewById(R.id.mainlayout);
-                Snackbar.make(relativeLayout, "No Events Found.", Snackbar.LENGTH_LONG)
-                        .show();
+                Toast.makeText(TMActivity.this, "No Events Found.", Toast.LENGTH_SHORT).show();
             } else {
                 adapter = new TMEventAdapter(getApplicationContext(), list);
                 list_events.setAdapter(adapter);

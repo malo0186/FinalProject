@@ -114,7 +114,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (id == R.id.action_tm_toolbar_button) {
-
+            Intent nextPage = new Intent(MainActivity.this, TMActivity.class);
+            startActivity(nextPage);
         }
 
         if (id == R.id.action_recipe_toolbar_icon1) {
@@ -154,7 +155,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (id == R.id.action_tm_toolbar_button) {
-
+            Intent nextPage = new Intent(MainActivity.this, TMActivity.class);
+            startActivity(nextPage);
         }
 
         if (id == R.id.action_recipe_toolbar_icon1) {
