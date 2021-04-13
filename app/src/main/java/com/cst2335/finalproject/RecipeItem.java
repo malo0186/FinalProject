@@ -2,6 +2,9 @@ package com.cst2335.finalproject;
 
 import java.io.Serializable;
 
+/**
+ * @author Cal Maciborka
+ */
 public class RecipeItem implements Serializable {
     String title;
     String ingredients;

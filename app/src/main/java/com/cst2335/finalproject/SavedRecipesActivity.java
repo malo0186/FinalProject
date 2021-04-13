@@ -1,8 +1,5 @@
 package com.cst2335.finalproject;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,10 +12,16 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * @author Cal Maciborka
+ */
 public class SavedRecipesActivity extends AppCompatActivity {
 
     private static final String TABLE_NAME = "RecipeTable";
-    private static SQLiteDatabase db = null;
+    private static final SQLiteDatabase db = null;
     private static RecipeDatabaseHelper dbHelper = null;
     private Button backBtn;
     private ImageButton helpBtn;

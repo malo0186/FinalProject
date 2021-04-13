@@ -9,9 +9,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * @author Cal Maciborka
+ */
 public class RecipeAdapter extends BaseAdapter {
-    private Context context;
-    private ArrayList<RecipeItem> recipeItemList;
+    private final Context context;
+    private final ArrayList<RecipeItem> recipeItemList;
 
     /**
      * This is the Constructor
