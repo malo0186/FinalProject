@@ -72,11 +72,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
 
-//        ImageButton btn_covid19 = (ImageButton)findViewById(R.id.btn_covid19);
-//        btn_covid19.setOnClickListener(bt -> {
-//            Intent nextPage = new Intent(MainActivity.this, CovidMain.class);
-//            startActivity(nextPage);
-//        });
+        ImageButton recipeIcon2 = (ImageButton)findViewById(R.id.another_recipe_icon);
+        recipeIcon2.setOnClickListener(bt -> {
+            Intent nextPage = new Intent(MainActivity.this, RecipeSearchActivity.class);
+            startActivity(nextPage);
+        });
 
 
 
@@ -124,7 +124,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (id == R.id.action_recipe_toolbar_icon2) {
-
+            Intent nextPage = new Intent(MainActivity.this, RecipeSearchActivity.class);
+            startActivity(nextPage);
         }
         return super.onOptionsItemSelected(item);
     }

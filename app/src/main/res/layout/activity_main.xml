@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:gravity="center_horizontal"
-                android:paddingTop="25dp"
+                android:paddingTop="40dp"
                 android:src="@drawable/covid19img" />
 
             <TextView
@@ -94,7 +94,7 @@
                 android:background="@android:color/transparent"
                 android:gravity="center_horizontal"
                 android:paddingTop="25dp"
-                android:src="@drawable/covid19img" />
+                android:src="@drawable/recipe_chef_icon" />
 
             <TextView
                 android:id="@+id/another_recipe_title_text"
