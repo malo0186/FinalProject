@@ -167,6 +167,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.action_recipe_toolbar_icon2) {
 
+            Intent nextPage = new Intent(MainActivity.this, RecipeSearchActivity.class);
+            startActivity(nextPage);
         }
         return super.onOptionsItemSelected(item);
     }

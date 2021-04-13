@@ -88,6 +88,7 @@ public class RecipeDB extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+        db.execSQL("delete from "+ TABLE_RECIPES);
         return recipeMap;
     }
 
