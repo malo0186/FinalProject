@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Final Project</string>
     <string name="enter_city_name">Enter City Name</string>
@@ -73,4 +74,23 @@
     <string name="toast_dialog_import_from_db">Importing Saved Recipes</string>
     <string name="toast_dialog_export_to_db">Exporting Saved Recipes</string>
 
+    <string name="searchForRecipeTextView">Search for a recipe:</string>
+    <string name="searchHintText">Search</string>
+    <string name="titleTextView">Title:</string>
+    <string name="ingredientsTextView">Ingredients:</string>
+    <string name="URLTextView">URL:</string>
+    <string name="saveRecipeButton">Save Recipe</string>
+    <string name="searchButton">SEARCH</string>
+    <string name="savedRecipesButton">Saved Recipes</string>
+    <string name="backToSearchButton">Back to search</string>
+    <string name="enterTextToast">Please enter some text!</string>
+    <string name="recipeSavedToast">Recipe saved!</string>
+    <string name="recipeAlreadySavedToast">Recipe is already saved!</string>
+    <string name="activityHelpTitle">Help With This Page</string>
+    <string name="alertOK">OK</string>
+    <string name="savedRecipesHelpMessage">This is where you can view recipes after you have clicked the \'Save Recipe\' button on any recipe.</string>
+    <string name="mainActivityHelpMessage">Please enter a recipe or an ingredient, then click the \'Search\' button to view results.</string>
+    <string name="recipeListHelpMessage">Please click on any recipe from the list to view details.</string>
+    <string name="recipeDetailsHelpMessage">This is where you can see the ingredients and the URL of the recipe you selected. Recipes can be saved by clicking the \'Save Recipe\' button. The URL can be clicked to open the website. Click the \'Back to Search\' button to search for something else.</string>
+    <string name="launchURLToast">Launching URL…</string>
 </resources>

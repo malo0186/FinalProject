@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SavedRecipesActivity">
+
+    <ListView
+        android:id="@+id/savedRecipesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/savedRecipesBackToSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/savedRecipesList"
+        android:layout_centerHorizontal="true"
+        android:text="@string/backToSearchButton" />
+
+    <ImageButton
+        android:id="@+id/savedRecipesHelpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="?android:selectableItemBackground"
+        android:padding="2dp"
+        android:src="@drawable/help" />
+
+</RelativeLayout>
