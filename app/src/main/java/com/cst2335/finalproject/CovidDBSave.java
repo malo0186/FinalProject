@@ -33,11 +33,11 @@ public class CovidDBSave extends AppCompatActivity {
      * This is where the activity is initalized. Here, setContentView is called with a layout
      * defining the UI for activity and findViewById is called on our widgets that we want to manipulate
      * @param savedInstanceState
-     */
+                */
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_covid_db_save);
 
         Intent dataFromActivity = getIntent();

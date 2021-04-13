@@ -27,7 +27,7 @@ public class CovidMessage implements Comparable<CovidMessage> {
      * Getter that returns the object's ID
      * @return the object's ID
      */
-    public Integer getID() {return id;}
+    public Integer getId() {return id;}
 
     /**
      * Setter that sets the object's ID with the passed in Integer
