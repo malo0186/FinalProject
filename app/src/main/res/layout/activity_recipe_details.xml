@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeDetailsActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titleTextView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recipeDetailsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTextView"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/ingredientsTextView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeDetailsTitle"
+        android:layout_marginTop="30dp"
+        android:text="@string/ingredientsTextView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recipeDetailsIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ingredientsTextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/URLTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeDetailsIngredients"
+        android:layout_marginTop="30dp"
+        android:text="@string/URLTextView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recipeDetailsURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/URLTextView"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/saveRecipeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recipeDetailsURL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/saveRecipeButton" />
+
+    <Button
+        android:id="@+id/detailsBackToListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/backToSearchButton" />
+
+    <ImageButton
+        android:id="@+id/recipeDetailsHelpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="?android:selectableItemBackground"
+        android:padding="2dp"
+        android:src="@drawable/help" />
+
+</RelativeLayout>
