@@ -9,8 +9,10 @@ import androidx.core.content.res.ResourcesCompat;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -38,6 +40,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * The main landing page for the recipe search portion of this application.
@@ -65,6 +68,7 @@ public class RecipeSearch extends AppCompatActivity {
     private Toolbar recipeToolbar;
     private int progress = 0;
     HashMap<String, String> recipeMap = new HashMap<>();
+    RecipeDB recipeDB;
 
     /**
      * The search page of the recipe search application is initialized here.
@@ -176,6 +180,22 @@ public class RecipeSearch extends AppCompatActivity {
         if (id == R.id.action_saves) {
             RecipeSaveFragment saveFragment = new RecipeSaveFragment();
             saveFragment.show(getSupportFragmentManager(), SAVES_FRAGMENT_TAG);
+            return true;
+        }
+
+        // calls the method to import saved recipes from the DB
+        if (id == R.id.recipe_db_import) {
+
+            importFromDB();
+
+            return true;
+        }
+
+        // calls the method to export saved recipes to the DB
+        if (id == R.id.recipe_db_export) {
+
+            exportToDB();
+
             return true;
         }
 
@@ -343,5 +363,47 @@ public class RecipeSearch extends AppCompatActivity {
             }
         });
         thread.start();
+    }
+
+    /**
+     * Imports any saved recipes from the database, and adds them to the saved recipe ListView
+     */
+    private void importFromDB() {
+
+        Toast.makeText(RecipeSearch.this, R.string.toast_dialog_import_from_db, Toast.LENGTH_LONG).show();
+
+        SharedPreferences sharedPref = this.getSharedPreferences(RecipePage.SAVED_RECIPES_KEY,Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        recipeDB = new RecipeDB(this);
+
+        // store database data ina HashMap
+        HashMap<String, String> dbData = recipeDB.getAllRecipes();
+
+        // loop through HashMap, storing recipe information in SharedPreferences
+        for (Map.Entry<String, String> entry : dbData.entrySet()) {
+
+            editor.putString(entry.getKey(), entry.getValue());
+            editor.apply();
+        }
+    }
+
+    /**
+     * Export any saved recipes to the database, removing them from the saved recipe ListView
+     */
+    private void exportToDB() {
+
+        Toast.makeText(RecipeSearch.this, R.string.toast_dialog_export_to_db, Toast.LENGTH_LONG).show();
+
+        SharedPreferences sharedPref = getSharedPreferences(RecipePage.SAVED_RECIPES_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        HashMap<String, String> saveMap = (HashMap<String, String>) sharedPref.getAll();
+
+        // add saved recipes from SharedPreferences to the database
+        recipeDB = new RecipeDB(this);
+        recipeDB.addRecipes(saveMap);
+
+        // clear all recipes from SharedPreferences
+        editor.clear();
+        editor.commit();
     }
 }

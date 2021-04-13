@@ -68,5 +68,9 @@
     <string name="toast_dialog_delete_save_text_no">No</string>
     <string name="toast_dialog_delete_save_text_title">Delete Recipe</string>
     <string name="choose_which_app_to_launch">Choose which app you would like to launch.</string>
+    <string name="recipe_db_import">Import</string>
+    <string name="recipe_db_export">Export</string>
+    <string name="toast_dialog_import_from_db">Importing Saved Recipes</string>
+    <string name="toast_dialog_export_to_db">Exporting Saved Recipes</string>
 
 </resources>
